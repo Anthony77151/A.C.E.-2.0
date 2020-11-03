@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: "Ma fonte";
+    src: url('../font/AlexBrush-Regular.ttf');
+}
+@font-face {
+    font-family: "Font global";
+    src: url('../font/Alice-Regular.ttf');
+}
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-image: url(https://zupimages.net/up/20/44/kn5q.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Font global";
+}
+  
+a {
+    color: ghostwhite;
+}
+  
+/* header */
+  
+.header {
+    background-color:rgb(22, 22, 22);
+    border-top: 2px solid ghostwhite;
+    border-bottom: 2px solid ghostwhite;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+  
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: rgb(22, 22, 22);
+}
+  
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    
+    text-decoration: none;
+}
+  
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color:rgb(22, 22, 22);
+}
+  
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: "Ma fonte";
+}
+  
+/* menu */
+  
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+  
+/* menu icon */
+  
+.header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+  
+.header .menu-icon .navicon {
+    background: ghostwhite;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+  
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: ghostwhite;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+  
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+  
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+  
+/* menu btn */
+  
+.header .menu-btn {
+    display: none;
+}
+  
+.header .menu-btn:checked ~ .menu {
+    max-height: 300px;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+  
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+.multimédia img{
+    height: 40px;
+    width: 40px;
+    margin-top: 70px;
+}
+/* Sécurité ~&~ Contrôle */
+/* Automatisme */
+/* Portes ~&~ Portails */
+/* Contrats d'entretien */
+/* contactez-nous */
+/* Formulaire */
+p {
+    margin-top: 0px;
+    color: ghostwhite;
+}
+fieldset {
+    margin-bottom: 15px;
+    padding: 10px;
+    margin-right: 75%;
+
+}   
+legend {
+    padding: 0px 3px;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: ghostwhite;
+}
+.labelformulaire {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 6px;
+    color: ghostwhite;
+}
+em {
+    font-weight: bold;
+    font-style: normal;
+    color: maroon;
+}
+   
+input:focus {
+    background: #eaeaea;
+}
+   
+input, textarea {
+    width: 330px;
+}
+   
+textarea {
+    height: 100px;
+    
+}
+   
+select {
+    width: 254px;
+}
+   
+input[type=checkbox] {
+    width: 10px;
+}
+   
+input[type=submit] {
+    width: 150px;
+    padding: 10px;
+}
+.Formulaire
+{
+    padding-top: 85px;
+    margin-left: 18px;
+    font-size: 20px;
+}
+h2{
+    color: ghostwhite;
+}
+.obligado {
+    font-size: 12px;
+}
+
+
+
+
