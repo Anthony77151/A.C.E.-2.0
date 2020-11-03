@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 @font-face {
     font-family: "Ma fonte";
     src: url('../font/AlexBrush-Regular.ttf');
@@ -134,3 +138,9 @@ body {
     top: 0;
   }
   
+
+ .multimédia img{
+    height: 40px;
+    width: 40px;
+    margin-top: 70px;
+ }
