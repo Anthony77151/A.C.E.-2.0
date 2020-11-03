@@ -142,5 +142,76 @@ a {
     width: 40px;
     margin-top: 70px;
 }
-/* DOMOTIQUE */
+/* Sécurité ~&~ Contrôle */
+/* Automatisme */
+/* Portes ~&~ Portails */
+/* Contrats d'entretien */
+/* contactez-nous */
+/* Formulaire */
 
+p {
+    margin-top: 0px;
+    color: ghostwhite;
+}
+fieldset {
+    margin-bottom: 15px;
+    padding: 10px;
+    margin-right: 75%;
+
+}   
+legend {
+    padding: 0px 3px;
+    font-weight: bold;
+    font-variant: small-caps;
+    color: ghostwhite;
+}
+.labelformulaire {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 6px;
+    color: ghostwhite;
+}
+em {
+    font-weight: bold;
+    font-style: normal;
+    color: maroon;
+}
+   
+input:focus {
+    background: #eaeaea;
+}
+   
+input, textarea {
+    width: 330px;
+}
+   
+textarea {
+    height: 100px;
+    
+}
+   
+select {
+    width: 254px;
+}
+   
+input[type=checkbox] {
+    width: 10px;
+}
+   
+input[type=submit] {
+    width: 150px;
+    padding: 10px;
+}
+.Formulaire
+{
+    padding-top: 85px;
+    margin-left: 18px;
+    font-size: 20px;
+}
+h2{
+    color: ghostwhite;
+}
+.obligado {
+    font-size: 12px;
+}
