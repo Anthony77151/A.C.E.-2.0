@@ -1,3 +1,7 @@
+
+@import "libs/responsive.scss";
+
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +14,7 @@
     font-family: "Font global";
     src: url('../font/Alice-Regular.ttf');
 }
+/* Mobil first */
 body {
     margin: 0;
     font-family: Helvetica, sans-serif;
@@ -147,6 +152,7 @@ a {
 /* Portes ~&~ Portails */
 /* Contrats d'entretien */
 /* contactez-nous */
+
 /* Formulaire */
 p {
     margin-top: 0px;
@@ -214,7 +220,29 @@ h2{
 .obligado {
     font-size: 12px;
 }
+/* Tablette */
 
+/* Desktop */
+
+@media #{$large-up} {
+    .header li {
+        float: left;
+      }
+      .header li a {
+        padding: 20px 30px;
+      }
+      .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+      }
+      .header .menu-icon {
+        display: none;
+      }
+      .header li a {
+          border-left: 1px solid ghostwhite;
+        }
+}
 
 
 
