@@ -17,7 +17,6 @@
 /* Mobil first */
 body {
     margin: 0;
-    font-family: Helvetica, sans-serif;
     background-image: url(https://zupimages.net/up/20/44/kn5q.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,7 +51,6 @@ a {
 .header li a {
     display: block;
     padding: 20px 20px;
-    
     text-decoration: none;
 }
   
@@ -227,21 +225,21 @@ h2{
 @media #{$large-up} {
     .header li {
         float: left;
-      }
-      .header li a {
+    }
+    .header li a {
         padding: 20px 30px;
-      }
-      .header .menu {
+    }
+    .header .menu {
         clear: none;
         float: right;
         max-height: none;
-      }
-      .header .menu-icon {
+    }
+    .header .menu-icon {
         display: none;
-      }
-      .header li a {
-          border-left: 1px solid ghostwhite;
-        }
+    }
+    .header li a {
+        border-left: 1px solid ghostwhite;
+    }
 }
 
 
