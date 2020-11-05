@@ -231,7 +231,7 @@ h2{
 
 @mixin carousel($items, $animation: 'default') {
   .carousel {
-    width: auto;
+    width: 394px;
     height: 300px;
     position: relative;
     overflow: hidden;
@@ -342,7 +342,7 @@ h2{
         width: 20px;
         height: 20px;
         position: absolute;
-        top: 150px;
+        top: 50%;
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
         transition: all .3s ease;
@@ -375,7 +375,7 @@ h2{
 
     &__prev {
       > label {
-        left: 10px;
+        left: 2%;
 
         &:before {
           left: 35%;
@@ -388,7 +388,7 @@ h2{
 
     &__next {
       > label {
-        right: 10px;
+        right: 2%;
 
         &:before {
           left: 10%;
@@ -403,7 +403,7 @@ h2{
       bottom: 5%;
       left: 0;
       text-align: center;
-      width: 394px;
+      width: 100%;
       z-index: 2;
 
       > label {
@@ -415,8 +415,7 @@ h2{
         width: 15px;
         height: 15px;
       }
-    }
-    
+    } 
   }
 }
 
@@ -464,3 +463,23 @@ h2{
   margin-top: 140px;
 }
 
+/* Desktop */
+@media #{$large-up} {
+  .header li {
+      float: left;
+  }
+  .header li a {
+      padding: 20px 30px;
+  }
+  .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+  }
+  .header .menu-icon {
+      display: none;
+  }
+  .header li a {
+      border-left: 1px solid ghostwhite;
+  }
+}

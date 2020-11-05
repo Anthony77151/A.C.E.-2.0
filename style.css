@@ -269,7 +269,7 @@ h2 {
 }
 
 .carousel {
-  width: auto;
+  width: 394px;
   height: 300px;
   position: relative;
   overflow: hidden;
@@ -339,7 +339,7 @@ h2 {
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 150px;
+  top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   transition: all 0.3s ease;
@@ -363,7 +363,7 @@ h2 {
   top: 20%;
 }
 .carousel__prev > label {
-  left: 10px;
+  left: 2%;
 }
 .carousel__prev > label:before {
   left: 35%;
@@ -372,7 +372,7 @@ h2 {
   -webkit-transform: rotate(135deg);
 }
 .carousel__next > label {
-  right: 10px;
+  right: 2%;
 }
 .carousel__next > label:before {
   left: 10%;
@@ -384,7 +384,7 @@ h2 {
   bottom: 5%;
   left: 0;
   text-align: center;
-  width: 394px;
+  width: 100%;
   z-index: 2;
 }
 .carousel__nav > label {
@@ -424,6 +424,31 @@ h2 {
 
 .vidéocomp2 {
   margin-top: 140px;
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  .header li {
+    float: left;
+  }
+
+  .header li a {
+    padding: 20px 30px;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+
+  .header li a {
+    border-left: 1px solid ghostwhite;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
