@@ -1,5 +1,7 @@
 
 @import "libs/responsive.scss";
+@import "libs/desktop.scss";
+@import "libs/tablette.scss";
 
 
 * {
@@ -219,274 +221,246 @@ h2{
 .obligado {
     font-size: 12px;
 }
-/* Tablette */
-
-/* Desktop */
-
-@media #{$large-up} {
-    .header li {
-        float: left;
-    }
-    .header li a {
-        padding: 20px 30px;
-    }
-    .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-    .header .menu-icon {
-        display: none;
-    }
-    .header li a {
-        border-left: 1px solid ghostwhite;
-    }
-}
-
-
 
 /**
- * Carousel.sass
- * @author: Dang Van Thanh
- * @github: https://github.com/dangvanthanh/carousel.sass
- * @description: A Simple Carousel Pure CSS Using Sass
- * @version: 1.0.0
- */
+ * Carousel.sass */
  %animation-default {
-    opacity: 1 !important;
-    z-index: 2;
-  }
-  
-  @mixin carousel($items, $animation: 'default') {
-    .carousel {
-      width: auto;
-      height: 300px;
-      position: relative;
-      overflow: hidden;
-  
-      > input[type="radio"] {
-        position: absolute;
-        left: 0;
-        opacity: 0;
-        top: 0;
-  
-        &:checked {
-          ~ .carousel__items .carousel__item,
-          ~ .carousel__prev > label,
-          ~ .carousel__next > label {
-            opacity: 0;
-          }
+  opacity: 1 !important;
+  z-index: 2;
+}
+
+@mixin carousel($items, $animation: 'default') {
+  .carousel {
+    width: auto;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+
+    > input[type="radio"] {
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      top: 0;
+
+      &:checked {
+        ~ .carousel__items .carousel__item,
+        ~ .carousel__prev > label,
+        ~ .carousel__next > label {
+          opacity: 0;
         }
-  
-        @for $i from 1 through $items {
-          &:nth-child(#{$i}) {
-            &:checked {
-              ~ .carousel__items .carousel__item {
-                @if $animation == 'default' {
-                  &:nth-child(#{$i}) {
-                    opacity: 1;
+      }
+
+      @for $i from 1 through $items {
+        &:nth-child(#{$i}) {
+          &:checked {
+            ~ .carousel__items .carousel__item {
+              @if $animation == 'default' {
+                &:nth-child(#{$i}) {
+                  opacity: 1;
+                }
+              }
+            }
+
+            ~ .carousel__prev {
+              > label {
+                @if $i == 1 {
+                  &:nth-child(#{$items}) {
+                    @extend %animation-default;
+                  }
+                } @else if $i == $items {
+                  &:nth-child(#{$items - 1}) {
+                    @extend %animation-default;
+                  }
+                } @else {
+                  &:nth-child(#{$i - 1}) {
+                    @extend %animation-default;
                   }
                 }
               }
-  
-              ~ .carousel__prev {
-                > label {
-                  @if $i == 1 {
-                    &:nth-child(#{$items}) {
-                      @extend %animation-default;
-                    }
-                  } @else if $i == $items {
-                    &:nth-child(#{$items - 1}) {
-                      @extend %animation-default;
-                    }
-                  } @else {
-                    &:nth-child(#{$i - 1}) {
-                      @extend %animation-default;
-                    }
+            }
+
+            ~ .carousel__next {
+              > label {
+                @if $i == $items {
+                  &:nth-child(1) {
+                    @extend %animation-default;
+                  }
+                } @else {
+                  &:nth-child(#{$i + 1}) {
+                    @extend %animation-default;
                   }
                 }
               }
-  
-              ~ .carousel__next {
-                > label {
-                  @if $i == $items {
-                    &:nth-child(1) {
-                      @extend %animation-default;
-                    }
-                  } @else {
-                    &:nth-child(#{$i + 1}) {
-                      @extend %animation-default;
-                    }
-                  }
-                }
-              }
-  
-              ~ .carousel__nav {
-                > label {
-                  &:nth-child(#{$i}) {
-                    background: #ccc;
-                    cursor: default;
-                    pointer-events: none;
-                  }
+            }
+
+            ~ .carousel__nav {
+              > label {
+                &:nth-child(#{$i}) {
+                  background: #ccc;
+                  cursor: default;
+                  pointer-events: none;
                 }
               }
             }
           }
         }
       }
-  
-      &__items {
-        margin: 0;
-        padding: 0;
-        list-style-type: none;
-        width: 100%;
-        height: 300px;
-        position: relative;
+    }
+
+    &__items {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      width: 394px;
+      height: 300px;
+      position: relative;
+    }
+
+    &__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 394px;
+      height: 300px;
+      z-index: 1;
+      transition: opacity 2s;
+      -webkit-transition: opacity 2s;
+
+      img {
+        width: 394px;
+        vertical-align: middle;
       }
-  
-      &__item {
+    }
+
+    &__prev,
+    &__next {
+      > label {
+        border: 1px solid #fff;
+        border-radius: 20%;
+        cursor: pointer;
+        display: block;
+        width: 20px;
+        height: 20px;
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 300px;
+        top: 150px;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        opacity: 0;
         z-index: 1;
-        transition: opacity 2s;
-        -webkit-transition: opacity 2s;
-  
-        img {
-          width: 100%;
-          vertical-align: middle;
+
+        &:hover,
+        &:focus {
+          opacity: .5 !important;
         }
-      }
-  
-      &__prev,
-      &__next {
-        > label {
-          border: 1px solid #fff;
-          border-radius: 20%;
-          cursor: pointer;
-          display: block;
-          width: 20px;
-          height: 20px;
+
+        &:before,
+        &:after {
+          content: "";
           position: absolute;
-          top: 150px;
-          transform: translateY(-50%);
-          -webkit-transform: translateY(-50%);
-          transition: all .3s ease;
-          -webkit-transition: all .3s ease;
-          opacity: 0;
-          z-index: 1;
-  
-          &:hover,
-          &:focus {
-            opacity: .5 !important;
-          }
-  
-          &:before,
-          &:after {
-            content: "";
-            position: absolute;
-            width: inherit;
-            height: inherit;
-          }
-  
-          &:before {
-            background: linear-gradient(to top, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%),
-                        linear-gradient(to left, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%);
-            width: 60%;
-            height: 60%;
-            top: 20%;
-          }
+          width: inherit;
+          height: inherit;
         }
-      }
-  
-      &__prev {
-        > label {
-          left: 2%;
-  
-          &:before {
-            left: 35%;
-            top: 20%;
-            transform: rotate(135deg);
-            -webkit-transform: rotate(135deg);
-          }
-        }
-      }
-  
-      &__next {
-        > label {
-          right: 2%;
-  
-          &:before {
-            left: 10%;
-            transform: rotate(315deg);
-            -webkit-transform: rotate(315deg);
-          }
-        }
-      }
-  
-      &__nav {
-        position: absolute;
-        bottom: 5%;
-        left: 0;
-        text-align: center;
-        width: 100%;
-        z-index: 2;
-  
-        > label {
-          border: 1px solid #fff;
-          display: inline-block;
-          border-radius: 50%;
-          cursor: pointer;
-          margin: 0 .125%;
-          width: 15px;
-          height: 15px;
+
+        &:before {
+          background: linear-gradient(to top, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%),
+                      linear-gradient(to left, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%);
+          width: 60%;
+          height: 60%;
+          top: 20%;
         }
       }
     }
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-  }
-  .container {
-    width: 100%;
-    display: flex;
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 75px;
-    flex-direction: column;
-  }
-  
-  @include carousel(3);
 
-  .portailbattant {
+    &__prev {
+      > label {
+        left: 10px;
+
+        &:before {
+          left: 35%;
+          top: 20%;
+          transform: rotate(135deg);
+          -webkit-transform: rotate(135deg);
+        }
+      }
+    }
+
+    &__next {
+      > label {
+        right: 10px;
+
+        &:before {
+          left: 10%;
+          transform: rotate(315deg);
+          -webkit-transform: rotate(315deg);
+        }
+      }
+    }
+
+    &__nav {
+      position: absolute;
+      bottom: 5%;
+      left: 0;
       text-align: center;
-      margin-top: 10px;
-      font-size: 30px;
-      background-color: #008eb6;
+      width: 394px;
+      z-index: 2;
+
+      > label {
+        border: 1px solid #fff;
+        display: inline-block;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 0 .125%;
+        width: 15px;
+        height: 15px;
+      }
+    }
+    
   }
-  .texteportail {
-      font-size: 20px;
-      margin-top: 10px;
-      background-color: rgb(22, 22, 22, 0.7);
-      box-shadow: 0px 5px 10px 5px rgb(22, 22, 22, 0.7);
-  }  
-  .séparation {
-    margin-top: 20px;
-    width: 360px;
-    margin-bottom: 20px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.container {
+  
+  display: flex;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 75px;
+  flex-direction: column;
+}
+
+@include carousel(3);
+
+.portailbattant {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 30px;
+    background-color: #008eb6;
+}
+.texteportail {
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: rgb(22, 22, 22, 0.7);
+    box-shadow: 0px 5px 10px 5px rgb(22, 22, 22, 0.7);
+}  
+.séparation {
+  margin-top: 20px;
+  width: 360px;
+  margin-bottom: 20px;
 }
 .Séparation{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }  
-  .vidéocomp2 {
-      margin-top: 70px;
-  }
+.vidéocomp2 {
+  margin-top: 140px;
+}
+

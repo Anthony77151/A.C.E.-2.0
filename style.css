@@ -1,4 +1,29 @@
 @charset "UTF-8";
+/* Desktop */
+@media screen and (min-width: 1025px) {
+  .header li {
+    float: left;
+  }
+
+  .header li a {
+    padding: 20px 30px;
+  }
+
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
+
+  .header li a {
+    border-left: 1px solid ghostwhite;
+  }
+}
+/* Tablette */
 * {
   margin: 0;
   padding: 0;
@@ -219,38 +244,8 @@ h2 {
   font-size: 12px;
 }
 
-/* Tablette */
-/* Desktop */
-@media screen and (min-width: 1025px) {
-  .header li {
-    float: left;
-  }
-
-  .header li a {
-    padding: 20px 30px;
-  }
-
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-
-  .header .menu-icon {
-    display: none;
-  }
-
-  .header li a {
-    border-left: 1px solid ghostwhite;
-  }
-}
 /**
- * Carousel.sass
- * @author: Dang Van Thanh
- * @github: https://github.com/dangvanthanh/carousel.sass
- * @description: A Simple Carousel Pure CSS Using Sass
- * @version: 1.0.0
- */
+ * Carousel.sass */
 .carousel > input[type=radio]:nth-child(3):checked ~ .carousel__next > label:nth-child(1), .carousel > input[type=radio]:nth-child(3):checked ~ .carousel__prev > label:nth-child(2), .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__next > label:nth-child(3), .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__prev > label:nth-child(1), .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__next > label:nth-child(2), .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__prev > label:nth-child(3) {
   opacity: 1 !important;
   z-index: 2;
@@ -265,7 +260,6 @@ h2 {
 }
 
 .container {
-  width: 100%;
   display: flex;
   float: left;
   margin-left: 10px;
@@ -319,7 +313,7 @@ h2 {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  width: 100%;
+  width: 394px;
   height: 300px;
   position: relative;
 }
@@ -327,14 +321,14 @@ h2 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 394px;
   height: 300px;
   z-index: 1;
   transition: opacity 2s;
   -webkit-transition: opacity 2s;
 }
 .carousel__item img {
-  width: 100%;
+  width: 394px;
   vertical-align: middle;
 }
 .carousel__prev > label, .carousel__next > label {
@@ -369,7 +363,7 @@ h2 {
   top: 20%;
 }
 .carousel__prev > label {
-  left: 2%;
+  left: 10px;
 }
 .carousel__prev > label:before {
   left: 35%;
@@ -378,7 +372,7 @@ h2 {
   -webkit-transform: rotate(135deg);
 }
 .carousel__next > label {
-  right: 2%;
+  right: 10px;
 }
 .carousel__next > label:before {
   left: 10%;
@@ -390,7 +384,7 @@ h2 {
   bottom: 5%;
   left: 0;
   text-align: center;
-  width: 100%;
+  width: 394px;
   z-index: 2;
 }
 .carousel__nav > label {
@@ -429,7 +423,7 @@ h2 {
 }
 
 .vidéocomp2 {
-  margin-top: 70px;
+  margin-top: 140px;
 }
 
 /*# sourceMappingURL=style.css.map */
