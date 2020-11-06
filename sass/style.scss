@@ -25,6 +25,7 @@ body {
     background-attachment: fixed;
     font-family: "Font global";
     display: flex;
+    flex-direction: column;
 }
   
 a {
@@ -427,7 +428,7 @@ h2{
   -moz-box-sizing: border-box;
 }
 .container {
-  
+
   display: flex;
   float: left;
   margin-left: 10px;
@@ -462,7 +463,26 @@ h2{
 .vidéocomp2 {
   margin-top: 140px;
 }
-
+/* Tablette */
+@media #{$medium-down} {
+  .mediacarousel1 {
+    display: flex;
+    justify-content: center;  
+  }
+  .textemedia1 {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    /*Soucis de width à voir avec Patrick*/   
+  }
+}
+@media #{$medium-up} {
+  .mediacarousel1 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+}
 /* Desktop */
 @media #{$large-up} {
   .header li {
