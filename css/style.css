@@ -1,4 +1,18 @@
 @charset "UTF-8";
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.container2 {
+  width: 100%;
+  padding: 75px 10px 0 10px;
+  margin: 0 auto 0 auto;
+}
+
 /* Tablette */
 * {
   margin: 0;
@@ -379,6 +393,7 @@ h2 {
 }
 
 .texteportail {
+  text-align: left;
   font-size: 20px;
   margin: 10px 0 0 0;
   background-color: rgba(22, 22, 22, 0.7);
@@ -407,7 +422,7 @@ h2 {
   }
 
   .textemedia1 {
-    text-align: center;
+    text-align: left;
     flex-direction: column;
     justify-content: center;
     width: 394px;
@@ -419,7 +434,7 @@ h2 {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 0 10px 0 10px;
+    padding: 0 10% 0 10%;
     margin: 75px 0 0 0;
   }
 
@@ -467,7 +482,7 @@ h2 {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 0 15% 0 15%;
+    padding: 0 10% 0 10%;
     margin: 75px 0 0 0;
   }
 
