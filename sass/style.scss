@@ -428,26 +428,23 @@ h2{
   -moz-box-sizing: border-box;
 }
 .container {
-
-  display: flex;
-  float: left;
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-top: 75px;
-  flex-direction: column;
+  width: 100%;
+  padding: 75px 10px 0 10px;
+  margin: 0 auto 0 auto;
+  
 }
 
 @include carousel(3);
 
 .portailbattant {
     text-align: center;
-    margin-top: 10px;
+    margin: 10px 0 0 0;
     font-size: 30px;
     background-color: #008eb6;
 }
 .texteportail {
     font-size: 20px;
-    margin-top: 10px;
+    margin: 10px 0 0 0;
     background-color: rgb(22, 22, 22, 0.7);
     box-shadow: 0px 5px 10px 5px rgb(22, 22, 22, 0.7);
 }  
@@ -465,21 +462,36 @@ h2{
 }
 /* Tablette */
 @media #{$medium-down} {
-  .mediacarousel1 {
-    display: flex;
-    justify-content: center;  
+  .carousel {
+    margin: 0 auto 0 auto;
   }
   .textemedia1 {
     text-align: center;
     flex-direction: column;
     justify-content: center;
-    /*Soucis de width à voir avec Patrick*/   
+    width: 394px;
+    margin: 0 auto 0 auto; 
   }
+  
 }
 @media #{$medium-up} {
-  .mediacarousel1 {
+  .container {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 10px 0 10px;
+    margin: 75px 0 0 0; 
+  }
+  .carousel {
+    padding: 0 10px 0 0;
+    
+  }
+  .textemedia1 {
+    text-align: left;
+    margin: 0 0 0 10px;
+  }
+  .portailbattant {
+    margin: 0 0 0 0;
   }
   
 }
@@ -501,5 +513,23 @@ h2{
   }
   .header li a {
       border-left: 1px solid ghostwhite;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 10px 0 10px;
+    margin: 75px 0 0 0; 
+  }
+  .carousel {
+    padding: 0 10px 0 0;
+    
+  }
+  .textemedia1 {
+    text-align: left;
+    margin: 0 0 0 10px;
+  }
+  .portailbattant {
+    margin: 0 0 0 0;
   }
 }
