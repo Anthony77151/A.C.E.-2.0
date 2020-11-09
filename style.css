@@ -449,6 +449,7 @@ h2 {
 
   .carousel {
     padding: 0 10px 0 0;
+    margin: 0 auto 0 auto;
   }
 
   .textemedia1 {
@@ -462,6 +463,7 @@ h2 {
 }
 /* Desktop */
 @media screen and (min-width: 1025px) {
+  /* menu */
   .header li {
     float: left;
   }
@@ -484,16 +486,22 @@ h2 {
     border-left: 1px solid ghostwhite;
   }
 
+  /*carousel */
   .container {
     display: flex;
     flex-direction: row;
     width: 100%;
-    padding: 0 10px 0 10px;
+    padding: 0 15% 0 15%;
     margin: 75px 0 0 0;
   }
 
   .carousel {
     padding: 0 10px 0 0;
+    margin: 0 auto 0 auto;
+    width: 500px;
+  }
+  .carousel__item img {
+    width: 500px;
   }
 
   .textemedia1 {
