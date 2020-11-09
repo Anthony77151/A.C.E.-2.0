@@ -235,8 +235,7 @@ h2 {
   font-size: 12px;
 }
 
-/**
- * Carousel.sass */
+/* Carousel */
 .carousel > input[type=radio]:nth-child(3):checked ~ .carousel__next > label:nth-child(1), .carousel > input[type=radio]:nth-child(3):checked ~ .carousel__prev > label:nth-child(2), .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__next > label:nth-child(3), .carousel > input[type=radio]:nth-child(2):checked ~ .carousel__prev > label:nth-child(1), .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__next > label:nth-child(2), .carousel > input[type=radio]:nth-child(1):checked ~ .carousel__prev > label:nth-child(3) {
   opacity: 1 !important;
   z-index: 2;
@@ -400,6 +399,7 @@ h2 {
   box-shadow: 0px 5px 10px 5px rgba(22, 22, 22, 0.7);
 }
 
+/* Séparation */
 .séparation {
   margin-top: 20px;
   width: 360px;
@@ -411,11 +411,7 @@ h2 {
   justify-content: center;
 }
 
-.vidéocomp2 {
-  margin-top: 140px;
-}
-
-/* Tablette */
+/* petite Tablette */
 @media screen and (min-width: 415px) and (max-width: 800px) {
   .carousel {
     margin: 0 auto 0 auto;
@@ -429,6 +425,7 @@ h2 {
     margin: 0 auto 0 auto;
   }
 }
+/* grande tablette */
 @media screen and (min-width: 801px) and (max-width: 1024px) {
   .container {
     display: flex;
