@@ -26,6 +26,8 @@ body {
     font-family: "Font global";
     display: flex;
     flex-direction: column;
+    position: relative;
+    
 }
   
 a {
@@ -144,11 +146,24 @@ a {
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
     top: 0;
 }
-.multimédia img{
-    height: 40px;
-    width: 40px;
-    margin-top: 70px;
+
+/* Footer */
+.multimédia {
+  height: 40px;
+  width: 40px;
+  
 }
+footer{
+  background:rgb(5,5,5);
+  border-bottom: 1px solid #008eb6;
+  border-top: 1px solid #008eb6;
+  position: absolute;
+  bottom: 0; 
+  width: 100%;  
+  justify-content: center;
+  height: 50px;
+  display: flex;
+  }
 /* Sécurité ~&~ Contrôle */
 /* Automatisme */
 /* Portes ~&~ Portails */
@@ -204,6 +219,7 @@ select {
    
 input[type=checkbox] {
     width: 10px;
+    
 }
    
 input[type=submit] {
@@ -215,6 +231,7 @@ input[type=submit] {
     padding-top: 85px;
     margin-left: 18px;
     font-size: 20px;
+    padding-bottom: 60px;
 }
 h2{
     color: ghostwhite;
@@ -432,7 +449,6 @@ h2{
   width: 100%;
   padding: 75px 10px 0 10px;
   margin: 0 auto 0 auto;
-  
 }
 
 @include carousel(3);
@@ -452,13 +468,14 @@ h2{
 } 
 /* Séparation */ 
 .séparation {
-  margin-top: 20px;
   width: 360px;
-  margin-bottom: 20px;
+  
 }
 .Séparation{
   display: flex;
   justify-content: center;
+  margin: 20px 0 20px 0;
+  padding-bottom: 50px;
 }  
 
 /* petite Tablette */

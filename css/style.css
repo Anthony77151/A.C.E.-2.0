@@ -37,6 +37,7 @@ body {
   font-family: "Font global";
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 a {
@@ -152,10 +153,22 @@ a {
   top: 0;
 }
 
-.multimédia img {
+/* Footer */
+.multimédia {
   height: 40px;
   width: 40px;
-  margin-top: 70px;
+}
+
+footer {
+  background: #050505;
+  border-bottom: 1px solid #008eb6;
+  border-top: 1px solid #008eb6;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+  height: 50px;
+  display: flex;
 }
 
 /* Sécurité ~&~ Contrôle */
@@ -225,6 +238,7 @@ input[type=submit] {
   padding-top: 85px;
   margin-left: 18px;
   font-size: 20px;
+  padding-bottom: 60px;
 }
 
 h2 {
@@ -401,14 +415,14 @@ h2 {
 
 /* Séparation */
 .séparation {
-  margin-top: 20px;
   width: 360px;
-  margin-bottom: 20px;
 }
 
 .Séparation {
   display: flex;
   justify-content: center;
+  margin: 20px 0 20px 0;
+  padding-bottom: 50px;
 }
 
 /* petite Tablette */
