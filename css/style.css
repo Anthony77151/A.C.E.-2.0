@@ -164,7 +164,7 @@ footer {
   background: #050505;
   border-bottom: 1px solid #008eb6;
   border-top: 1px solid #008eb6;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   justify-content: center;
@@ -239,7 +239,6 @@ input[type=submit] {
   padding-top: 85px;
   margin-left: 18px;
   font-size: 20px;
-  padding-bottom: 80px;
 }
 
 h2 {
