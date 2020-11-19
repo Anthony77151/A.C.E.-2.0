@@ -1,22 +1,24 @@
-
 @import "libs/responsive.scss";
 @import "libs/desktop.scss";
 @import "libs/tablette.scss";
-
-
 * {
     margin: 0;
     padding: 0;
 }
+
 @font-face {
     font-family: "Ma fonte";
     src: url('../font/AlexBrush-Regular.ttf');
 }
+
 @font-face {
     font-family: "Font global";
     src: url('../font/Alice-Regular.ttf');
 }
+
+
 /* Mobil first */
+
 body {
     margin: 0;
     background-image: url(https://zupimages.net/up/20/44/kn5q.png);
@@ -27,25 +29,25 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    
 }
-  
+
 a {
     color: ghostwhite;
 }
-  
+
+
 /* header */
-  
+
 .header {
-    background-color:rgb(22, 22, 22);
+    background-color: rgb(22, 22, 22);
     border-top: 2px solid ghostwhite;
     border-bottom: 2px solid ghostwhite;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
     position: fixed;
     width: 100%;
     z-index: 3;
 }
-  
+
 .header ul {
     margin: 0;
     padding: 0;
@@ -53,18 +55,18 @@ a {
     overflow: hidden;
     background-color: rgb(22, 22, 22);
 }
-  
+
 .header li a {
     display: block;
     padding: 20px 20px;
     text-decoration: none;
 }
-  
+
 .header li a:hover,
 .header .menu-btn:hover {
-    background-color:#008eb6;
+    background-color: #008eb6;
 }
-  
+
 .header .logo {
     display: block;
     float: left;
@@ -73,17 +75,19 @@ a {
     text-decoration: none;
     font-family: "Ma fonte";
 }
-  
+
+
 /* menu */
-  
+
 .header .menu {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
 }
-  
+
+
 /* menu icon */
-  
+
 .header .menu-icon {
     cursor: pointer;
     float: right;
@@ -91,7 +95,7 @@ a {
     position: relative;
     user-select: none;
 }
-  
+
 .header .menu-icon .navicon {
     background: ghostwhite;
     display: block;
@@ -100,7 +104,7 @@ a {
     transition: background .2s ease-out;
     width: 18px;
 }
-  
+
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
     background: ghostwhite;
@@ -111,82 +115,100 @@ a {
     transition: all .2s ease-out;
     width: 100%;
 }
-  
+
 .header .menu-icon .navicon:before {
     top: 5px;
 }
-  
+
 .header .menu-icon .navicon:after {
     top: -5px;
 }
-  
+
+
 /* menu btn */
-  
+
 .header .menu-btn {
     display: none;
 }
-  
-.header .menu-btn:checked ~ .menu {
+
+.header .menu-btn:checked~.menu {
     max-height: 300px;
 }
-  
-.header .menu-btn:checked ~ .menu-icon .navicon {
+
+.header .menu-btn:checked~.menu-icon .navicon {
     background: transparent;
 }
-  
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
     transform: rotate(-45deg);
 }
-  
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
     transform: rotate(45deg);
 }
-  
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
     top: 0;
 }
 
+
 /* Footer */
+
 .multimédia {
-  height: 50px;
-  width: 40px;
-  padding-top: 10px;
+    height: 50px;
+    width: 40px;
+    padding-top: 10px;
 }
-footer{
-  background:rgb(5,5,5);
-  border-bottom: 1px solid #008eb6;
-  border-top: 1px solid #008eb6;
-  position: fixed;
-  bottom: 0; 
-  width: 100%;  
-  justify-content: center;
-  height: 60px;
-  display: flex;
-  }
+
+footer {
+    background: rgb(5, 5, 5);
+    border-bottom: 1px solid #008eb6;
+    border-top: 1px solid #008eb6;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;
+    height: 60px;
+    display: flex;
+}
+
+
 /* Sécurité ~&~ Contrôle */
+
+
 /* Automatisme */
+
+
 /* Portes ~&~ Portails */
+
+
 /* Contrats d'entretien */
+
+
 /* contactez-nous */
 
+
 /* Formulaire */
+
 p {
     margin-top: 0px;
     color: ghostwhite;
 }
+
 fieldset {
     margin-bottom: 15px;
     padding: 10px;
     margin-right: 75%;
+}
 
-}   
 legend {
     padding: 0px 3px;
     font-weight: bold;
     font-variant: small-caps;
     color: ghostwhite;
 }
+
 .labelformulaire {
     width: 100%;
     display: inline-block;
@@ -194,372 +216,364 @@ legend {
     margin: 6px;
     color: ghostwhite;
 }
+
 em {
     font-weight: bold;
     font-style: normal;
     color: maroon;
 }
-   
+
 input:focus {
     background: #eaeaea;
 }
-   
-input, textarea {
+
+input,
+textarea {
     width: 330px;
 }
-   
+
 textarea {
     height: 100px;
-    
 }
-   
+
 select {
     width: 254px;
 }
-   
+
 input[type=checkbox] {
     width: 10px;
-    
 }
-   
+
 input[type=submit] {
     width: 150px;
     padding: 10px;
 }
-.Formulaire
-{
+
+.Formulaire {
     padding-top: 85px;
     margin-left: 18px;
     font-size: 20px;
 }
-h2{
+
+h2 {
     color: ghostwhite;
 }
+
 .obligado {
     font-size: 12px;
 }
 
 
- /* Carousel */
+/* Carousel */
 
- %animation-default {
-  opacity: 1 !important;
-  z-index: 2;
+%animation-default {
+    opacity: 1 !important;
+    z-index: 2;
 }
 
-@mixin carousel($items, $animation: 'default') {
-  .carousel {
-    width: 394px;
-    height: 300px;
-    position: relative;
-    overflow: hidden;
-
-    > input[type="radio"] {
-      position: absolute;
-      left: 0;
-      opacity: 0;
-      top: 0;
-
-      &:checked {
-        ~ .carousel__items .carousel__item,
-        ~ .carousel__prev > label,
-        ~ .carousel__next > label {
-          opacity: 0;
-        }
-      }
-
-      @for $i from 1 through $items {
-        &:nth-child(#{$i}) {
-          &:checked {
-            ~ .carousel__items .carousel__item {
-              @if $animation == 'default' {
-                &:nth-child(#{$i}) {
-                  opacity: 1;
-                }
-              }
-            }
-
-            ~ .carousel__prev {
-              > label {
-                @if $i == 1 {
-                  &:nth-child(#{$items}) {
-                    @extend %animation-default;
-                  }
-                } @else if $i == $items {
-                  &:nth-child(#{$items - 1}) {
-                    @extend %animation-default;
-                  }
-                } @else {
-                  &:nth-child(#{$i - 1}) {
-                    @extend %animation-default;
-                  }
-                }
-              }
-            }
-
-            ~ .carousel__next {
-              > label {
-                @if $i == $items {
-                  &:nth-child(1) {
-                    @extend %animation-default;
-                  }
-                } @else {
-                  &:nth-child(#{$i + 1}) {
-                    @extend %animation-default;
-                  }
-                }
-              }
-            }
-
-            ~ .carousel__nav {
-              > label {
-                &:nth-child(#{$i}) {
-                  background: #ccc;
-                  cursor: default;
-                  pointer-events: none;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    &__items {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-      width: 394px;
-      height: 300px;
-      position: relative;
-    }
-
-    &__item {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 394px;
-      height: 300px;
-      z-index: 1;
-      transition: opacity 2s;
-      -webkit-transition: opacity 2s;
-
-      img {
+@mixin carousel($items,
+$animation: 'default') {
+    .carousel {
         width: 394px;
-        vertical-align: middle;
-      }
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        >input[type="radio"] {
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            top: 0;
+            &:checked {
+                ~.carousel__items .carousel__item,
+                ~.carousel__prev>label,
+                ~.carousel__next>label {
+                    opacity: 0;
+                }
+            }
+            @for $i from 1 through $items {
+                &:nth-child(#{$i}) {
+                    &:checked {
+                        ~.carousel__items .carousel__item {
+                            @if $animation=='default' {
+                                &:nth-child(#{$i}) {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                        ~.carousel__prev {
+                            >label {
+                                @if $i==1 {
+                                    &:nth-child(#{$items}) {
+                                        @extend %animation-default;
+                                    }
+                                }
+                                @else if $i==$items {
+                                    &:nth-child(#{$items - 1}) {
+                                        @extend %animation-default;
+                                    }
+                                }
+                                @else {
+                                    &:nth-child(#{$i - 1}) {
+                                        @extend %animation-default;
+                                    }
+                                }
+                            }
+                        }
+                        ~.carousel__next {
+                            >label {
+                                @if $i==$items {
+                                    &:nth-child(1) {
+                                        @extend %animation-default;
+                                    }
+                                }
+                                @else {
+                                    &:nth-child(#{$i + 1}) {
+                                        @extend %animation-default;
+                                    }
+                                }
+                            }
+                        }
+                        ~.carousel__nav {
+                            >label {
+                                &:nth-child(#{$i}) {
+                                    background: #ccc;
+                                    cursor: default;
+                                    pointer-events: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__items {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            width: 394px;
+            height: 300px;
+            position: relative;
+        }
+        &__item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 394px;
+            height: 300px;
+            z-index: 1;
+            transition: opacity 2s;
+            -webkit-transition: opacity 2s;
+            img {
+                width: 394px;
+                vertical-align: middle;
+            }
+        }
+        &__prev,
+        &__next {
+            >label {
+                border: 1px solid #fff;
+                border-radius: 20%;
+                cursor: pointer;
+                display: block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                transition: all .3s ease;
+                -webkit-transition: all .3s ease;
+                opacity: 0;
+                z-index: 1;
+                &:hover,
+                &:focus {
+                    opacity: .5 !important;
+                }
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: inherit;
+                    height: inherit;
+                }
+                &:before {
+                    background: linear-gradient(to top, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%), linear-gradient(to left, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%);
+                    width: 60%;
+                    height: 60%;
+                    top: 20%;
+                }
+            }
+        }
+        &__prev {
+            >label {
+                left: 2%;
+                &:before {
+                    left: 35%;
+                    top: 20%;
+                    transform: rotate(135deg);
+                    -webkit-transform: rotate(135deg);
+                }
+            }
+        }
+        &__next {
+            >label {
+                right: 2%;
+                &:before {
+                    left: 10%;
+                    transform: rotate(315deg);
+                    -webkit-transform: rotate(315deg);
+                }
+            }
+        }
+        &__nav {
+            position: absolute;
+            bottom: 5%;
+            left: 0;
+            text-align: center;
+            width: 100%;
+            z-index: 2;
+            >label {
+                border: 1px solid #fff;
+                display: inline-block;
+                border-radius: 50%;
+                cursor: pointer;
+                margin: 0 .125%;
+                width: 15px;
+                height: 15px;
+            }
+        }
     }
-
-    &__prev,
-    &__next {
-      > label {
-        border: 1px solid #fff;
-        border-radius: 20%;
-        cursor: pointer;
-        display: block;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        transition: all .3s ease;
-        -webkit-transition: all .3s ease;
-        opacity: 0;
-        z-index: 1;
-
-        &:hover,
-        &:focus {
-          opacity: .5 !important;
-        }
-
-        &:before,
-        &:after {
-          content: "";
-          position: absolute;
-          width: inherit;
-          height: inherit;
-        }
-
-        &:before {
-          background: linear-gradient(to top, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%),
-                      linear-gradient(to left, #fff 0%, #fff 10%, rgba(51, 51, 51, 0) 10%);
-          width: 60%;
-          height: 60%;
-          top: 20%;
-        }
-      }
-    }
-
-    &__prev {
-      > label {
-        left: 2%;
-
-        &:before {
-          left: 35%;
-          top: 20%;
-          transform: rotate(135deg);
-          -webkit-transform: rotate(135deg);
-        }
-      }
-    }
-
-    &__next {
-      > label {
-        right: 2%;
-
-        &:before {
-          left: 10%;
-          transform: rotate(315deg);
-          -webkit-transform: rotate(315deg);
-        }
-      }
-    }
-
-    &__nav {
-      position: absolute;
-      bottom: 5%;
-      left: 0;
-      text-align: center;
-      width: 100%;
-      z-index: 2;
-
-      > label {
-        border: 1px solid #fff;
-        display: inline-block;
-        border-radius: 50%;
-        cursor: pointer;
-        margin: 0 .125%;
-        width: 15px;
-        height: 15px;
-      }
-    } 
-  }
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
+
 .container {
-  width: 100%;
-  padding: 75px 10px 0 10px;
-  margin: 0 auto 0 auto;
+    width: 100%;
+    padding: 75px 10px 0 10px;
+    margin: 0 auto 0 auto;
 }
 
 @include carousel(3);
-
 .portailbattant {
     text-align: center;
     margin: 10px 0 0 0;
     font-size: 30px;
     background-color: #008eb6;
 }
+
 .texteportail {
     text-align: left;
     font-size: 20px;
     margin: 10px 0 0 0;
     background-color: rgb(22, 22, 22, 0.7);
     box-shadow: 0px 5px 10px 5px rgb(22, 22, 22, 0.7);
-} 
-/* Séparation */ 
-.séparation {
-  width: 360px;
-  
 }
-.Séparation{
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 20px 0;
-  padding-bottom: 50px;
-}  
+
+
+/* Séparation */
+
+.séparation {
+    width: 360px;
+}
+
+.Séparation {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+    padding-bottom: 50px;
+}
+
 
 /* petite Tablette */
+
 @media #{$medium-down} {
-  .carousel {
-    margin: 0 auto 0 auto;
-  }
-  .textemedia1 {
-    text-align: left;
-    flex-direction: column;
-    justify-content: center;
-    width: 394px;
-    margin: 0 auto 0 auto; 
-  }
-  
+    .carousel {
+        margin: 0 auto 0 auto;
+    }
+    .textemedia1 {
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+        width: 394px;
+        margin: 0 auto 0 auto;
+    }
 }
+
+
 /* grande tablette */
+
 @media #{$medium-up} {
-  .container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 0 10% 0 10%;
-    margin: 75px 0 0 0; 
-  }
-  .carousel {
-    padding: 0 10px 0 0;
-    margin: 0 auto 0 auto;
-  }
-  .textemedia1 {
-    text-align: left;
-    margin: 0 0 0 10px;
-  }
-  .portailbattant {
-    margin: 0 0 0 0;
-  }
-  
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 0 10% 0 10%;
+        margin: 75px 0 0 0;
+    }
+    .carousel {
+        padding: 0 10px 0 0;
+        margin: 0 auto 0 auto;
+    }
+    .textemedia1 {
+        text-align: left;
+        margin: 0 0 0 10px;
+    }
+    .portailbattant {
+        margin: 0 0 0 0;
+    }
 }
+
+
 /* Desktop */
 
-
 @media #{$large-up} {
-  /* menu */
-  .header li {
-      float: left;
-  }
-  .header li a {
-      padding: 20px 30px;
-  }
-  
-  .header .menu {
-      clear: none;
-      float: right;
-      max-height: none;
-  }
-  .header .menu-icon {
-      display: none;
-  }
-  .header li a {
-      border-left: 1px solid ghostwhite;
-  }
-  /*carousel */
-  .container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: 0 10% 0 10%;
-    margin: 75px 0 0 0; 
-  }
-  .carousel {
-    padding: 0 10px 0 0;
-    margin: 0 auto 0 auto;
-    width: 500px;
-      &__item {
-        img {
-          width: 500px;
+    /* menu */
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+    .header li a {
+        border-left: 1px solid ghostwhite;
+    }
+    /*carousel */
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 0 10% 0 10%;
+        margin: 75px 0 0 0;
+    }
+    .carousel {
+        padding: 0 10px 0 0;
+        margin: 0 auto 0 auto;
+        width: 500px;
+        &__item {
+            img {
+                width: 500px;
+            }
         }
-      }
-  }
-  
-  .textemedia1 {
-    text-align: left;
-    margin: 0 0 0 10px;
-  }
-  .portailbattant {
-    margin: 0 0 0 0;
-  }
+    }
+    .textemedia1 {
+        text-align: left;
+        margin: 0 0 0 10px;
+    }
+    .portailbattant {
+        margin: 0 0 0 0;
+    }
 }
